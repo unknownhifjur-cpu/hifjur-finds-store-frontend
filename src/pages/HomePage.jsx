@@ -74,7 +74,7 @@ const HomePage = () => {
             <div className="flex items-center gap-3 mb-4">
               <ShoppingBag className="w-8 h-8 text-indigo-300" />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight">
-                Welcome to <span className="font-semibold text-indigo-300">Hifzo</span>
+                Welcome to <span className="font-semibold text-indigo-300">Carto</span>
               </h1>
             </div>
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
@@ -136,7 +136,7 @@ const HomePage = () => {
       {/* Simple Footer */}
       <footer className="bg-gray-50 border-t border-gray-200 py-8">
         <div className="container mx-auto px-4 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Hifzo. All rights reserved.
+          &copy; {new Date().getFullYear()} Carto. All rights reserved.
         </div>
       </footer>
     </div>

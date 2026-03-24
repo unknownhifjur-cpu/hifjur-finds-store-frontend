@@ -57,7 +57,7 @@ const Navbar = () => {
               to="/"
               className="text-2xl md:text-3xl font-bold text-white hover:text-indigo-400 transition-colors"
             >
-              Hifzo
+              Carto
             </Link>
 
             {/* Desktop Navigation */}
