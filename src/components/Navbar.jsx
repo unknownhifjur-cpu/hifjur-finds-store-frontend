@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShoppingCart, User, Menu, X, LogOut, Package, Home, Grid } from 'lucide-react';
+import { ShoppingCart, User, Menu, X, LogOut, Package, Home, Grid, Truck } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 
@@ -25,6 +25,7 @@ const Navbar = () => {
   const navLinks = [
     { to: '/', label: 'Home', icon: Home },
     { to: '/products', label: 'Products', icon: Grid },
+    { to: '/track', label: 'Track Orders', icon: Truck },
   ];
 
   const authLinks = user
@@ -52,7 +53,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16 md:h-20">
-            {/* Logo - matching homepage hero */}
+            {/* Logo */}
             <Link
               to="/"
               className="text-2xl md:text-3xl font-bold text-white hover:text-indigo-400 transition-colors"
@@ -66,8 +67,9 @@ const Navbar = () => {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-gray-300 hover:text-indigo-400 transition-colors font-medium"
+                  className="text-gray-300 hover:text-indigo-400 transition-colors font-medium flex items-center gap-1"
                 >
+                  {link.icon && <link.icon className="w-4 h-4" />}
                   {link.label}
                 </Link>
               ))}
@@ -152,7 +154,7 @@ const Navbar = () => {
                       onClick={closeMenu}
                       className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-indigo-400 hover:bg-gray-800 transition-colors"
                     >
-                      <link.icon className="w-5 h-5" />
+                      {link.icon && <link.icon className="w-5 h-5" />}
                       {link.label}
                     </Link>
                   ))}
