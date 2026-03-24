@@ -24,7 +24,7 @@ const Loader = () => {
           ))}
         </div>
         {/* Optional subtle text */}
-        <p className="text-indigo-200 text-sm font-light tracking-wider">Loading CartoHub</p>
+        <p className="text-indigo-200 text-sm font-light tracking-wider">Loading Hifzo</p>
       </div>
     </div>
   );
