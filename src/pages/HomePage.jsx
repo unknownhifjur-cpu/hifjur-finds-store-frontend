@@ -74,7 +74,7 @@ const HomePage = () => {
             <div className="flex items-center gap-3 mb-4">
               <ShoppingBag className="w-8 h-8 text-indigo-300" />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight">
-                Welcome to <span className="font-semibold text-indigo-300">Carto</span>
+                Welcome to <span className="font-semibold text-indigo-300">CartoHub</span>
               </h1>
             </div>
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
