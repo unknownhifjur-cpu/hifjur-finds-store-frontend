@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
@@ -15,6 +16,7 @@ import ProfilePage from './pages/ProfilePage';
 import MyOrdersPage from './pages/MyOrdersPage';
 import OrderTrackingPage from './pages/OrderTrackingPage';
 import WishlistPage from './pages/WishlistPage';
+import OrderDetailsPage from './pages/OrderDetailsPage';   // ✅ new import
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
               <Route path="/myorders" element={<PrivateRoute><MyOrdersPage /></PrivateRoute>} />
               <Route path="/track" element={<OrderTrackingPage />} />
               <Route path="/wishlist" element={<WishlistPage />} />
+              <Route path="/order/:orderId" element={<OrderDetailsPage />} />   {/* ✅ new route */}
             </Routes>
           </WishlistProvider>
         </CartProvider>

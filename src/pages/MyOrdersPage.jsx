@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';               // ✅ added import
 import { motion } from 'framer-motion';
 import { Package, Calendar, DollarSign, ChevronRight, ShoppingBag } from 'lucide-react';
 import API from '../services/api';
@@ -113,16 +114,17 @@ const MyOrdersPage = () => {
                     <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(order.orderStatus)}`}>
                       {order.orderStatus || 'Pending'}
                     </span>
-                    <a
-                      href={`/order/${order._id}`}
+                    {/* ✅ replaced <a> with <Link> */}
+                    <Link
+                      to={`/order/${order._id}`}
                       className="text-indigo-400 hover:text-indigo-300 transition-colors p-2"
                     >
                       <ChevronRight className="w-5 h-5" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
-                {/* Product preview (optional) */}
+                {/* Product preview */}
                 {order.products && order.products.length > 0 && (
                   <div className="mt-4 pt-4 border-t border-gray-700">
                     <div className="flex flex-wrap gap-2">
